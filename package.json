@@ -1,0 +1,41 @@
+{
+  "name": "dataviz",
+  "version": "1.0.0",
+  "description": "Desktop, browser based data visualization application",
+  "main": "index.js",
+  "scripts": {
+    "watch-dev": "sass --watch dev/static/scss/app.scss dev/static/css/app.css",
+    "start-dev": "cd dev && python app.py",
+    "dev": "concurrently \"npm run watch-dev\" \"npm run start-dev\"",
+    "build-dist": "",
+    "build-prod": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stopaalex/DataViz.git"
+  },
+  "author": "stopaalex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stopaalex/DataViz/issues"
+  },
+  "homepage": "https://github.com/stopaalex/DataViz#readme",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-shell": "^0.7.0"
+  }
+}

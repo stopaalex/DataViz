@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myAppCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <title>Page Title</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="static/css/app.css">
+
+</head>
+
+<body>
+
+    Hello, World!
+    <nav navigation class="nav-wrapper"></nav>
+    <div ng-view class="view-wrapper"></div>
+
+    <script src="static/lib/jquery_3.3.1_min.js"></script>
+    <script src="static/lib/angular_1.7.7_min.js"></script>
+    <script src="static/lib/angular-route_1.7.7_min.js"></script>
+
+    <script src="static/app.js"></script>
+    
+    <script src="static/modules/views/login/login.module.js"></script>
+    <script src="static/modules/views/login/login.controller.js"></script>
+    
+    <script src="static/modules/directives/navigation/navigation.module.js"></script>
+    <script src="static/modules/directives/navigation/navigation.controller.js"></script>
+</body>
+
+</html>
