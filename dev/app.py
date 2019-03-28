@@ -14,6 +14,8 @@ import json, csv, os.path, datetime
 
 import pandas as pd
 
+from api import authorize
+
 # 
 # define the app
 app = Flask(__name__)
@@ -26,8 +28,9 @@ def index():
 
 @app.route('/test', methods=['POST'])
 def test():
-     print('hello')
-     return ''
+
+     auth = authorize.authUser()
+     return auth
 
 if __name__ == '__main__':
      app.run(port=8080)

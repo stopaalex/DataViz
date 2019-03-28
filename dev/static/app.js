@@ -3,7 +3,9 @@
 var myApp = angular.module('myApp', [
     'ngRoute',
     'login',
-    'navigation'
+    'navigation',
+    'authService',
+    'loadingService'
 ]);
 
 myApp.config(function ($routeProvider) {
@@ -18,9 +20,14 @@ myApp.config(function ($routeProvider) {
 });
 
 
-myApp.controller('myAppCtrl', function ($scope, $rootScope, $location) {
+myApp.controller('myAppCtrl', function ($scope, $rootScope, $location, loadingService, authService) {
 
     function init() {
+        // loadingService.create_loader('loading...')
+        authService.auth_user()
+            .then(data => {
+                console.log(data);
+            })
     }
 
     init();
