@@ -6,10 +6,10 @@ var authService = angular.module('authService', [])
         authService.auth_user = function() {
             var authAjax = $.ajax({
                 method: 'POST',
-                url: '/test',
+                url: '/authorizeUser',
                 contentType: 'application/json; charset=utf-8',
                 success: data => {
-                    return data;
+                    return data; 
                 },
                 error: err => { }
             });

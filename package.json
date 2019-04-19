@@ -4,6 +4,7 @@
   "description": "Desktop, browser based data visualization application",
   "main": "index.js",
   "scripts": {
+    "install dev": "npm install -g sass && npm install && pip install flask && pip install flask_restful && pip install pandas",
     "watch-dev": "sass --watch dev/static/scss/app.scss dev/static/css/app.css",
     "start-dev": "cd dev && python app.py",
     "dev": "concurrently \"npm run watch-dev\" \"npm run start-dev\"",
