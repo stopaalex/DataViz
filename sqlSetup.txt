@@ -1,0 +1,35 @@
+CREATE DATABASE day2day;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    first_name varchar(255) NOT NULL,
+    last_name varchar(255) NOT NULL,
+    picture varchar(10485760),
+    email varchar(255) UNIQUE NOT NULL,
+    password varchar(255) NOT NULL
+);
+
+CREATE TABLE user_tokens (
+    id SERIAL PRIMARY KEY,
+    user_id varchar(255) UNIQUE NOT NULL,
+    token varchar(128) UNIQUE NOT NULL
+);
+
+CREATE TABLE sheets (
+    id SERIAL PRIMARY KEY,
+    owner varchar(255) NOT NULL,
+    date varchar(255) NOT NULL
+);
+
+CREATE TABLE notes (
+    id SERIAL PRIMARY KEY,
+    sheet varchar(255) NOT NULL,
+    content varchar(10485760),
+    location varchar(255) NOT NULL
+);
+
+CREATE TABLE stickies (
+    id SERIAL PRIMARY KEY,
+    sheet varchar(255) NOT NULL,
+    content varchar(10485760)
+);
