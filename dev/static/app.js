@@ -26,7 +26,7 @@ myApp.controller('myAppCtrl', function ($scope, $rootScope, $location, loadingSe
         // loadingService.create_loader('loading...')
         authService.auth_user()
             .then(data => {
-                console.log(data); 
+                console.log(data + ' test return'); 
             })
     }
 

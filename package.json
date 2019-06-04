@@ -4,10 +4,14 @@
   "description": "Desktop, browser based data visualization application",
   "main": "index.js",
   "scripts": {
-    "install dev": "npm install -g sass && npm install && pip install flask && pip install flask_restful && pip install pandas",
+    "setup-dev": "npm install -g sass && npm install && pip install flask && pip install flask_restful && pip install pandas && mkdir db/",
+    "setup-dev-mac": "npm install -g sass && npm install && pip3 install flask && pip3 install flask_restful && pip3 install pandas && sudo mkdir -p db/",
+    "____lineabreak____1": "______________________",
     "watch-dev": "sass --watch dev/static/scss/app.scss dev/static/css/app.css",
     "start-dev": "cd dev && python app.py",
+    "start-dev-mac": "cd dev && python3 app.py",
     "dev": "concurrently \"npm run watch-dev\" \"npm run start-dev\"",
+    "____lineabreak____2": "______________________",
     "build-dist": "",
     "build-prod": "",
     "test": "echo \"Error: no test specified\" && exit 1"
